@@ -33,7 +33,7 @@ if existing_data is not None:
 new_data_list = []
 
 # Iterate over the years and months
-for year in range(2011, 2020):  # Adjust the range as needed
+for year in range(2011, 2018):  # Adjust the range as needed
     for month in range(1, 13):  # Loop over months (1 to 12)
         year_month_str = f"{year}-{month:02d}"  # Format as YYYY-MM
         if year_month_str in fetched_dates:
@@ -71,6 +71,7 @@ for year in range(2011, 2020):  # Adjust the range as needed
                     print(f"No valid table found in the response for {year_month_str}.")
             except (ValueError, KeyError) as e:
                 print(f"Error processing data for {year_month_str}: {e}")
+                break
         else:
             print(f"Failed to fetch data for {year_month_str}. HTTP Status: {response.status_code}")
         
