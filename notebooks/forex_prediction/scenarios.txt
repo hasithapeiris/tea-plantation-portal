@@ -1,0 +1,12 @@
+Consider this scenario,
+
+A user enters input features as:
+1. Date (Year, Month):
+2. Production Quantities (High, Medium, Low):
+3. Export Quantity:
+4. Export Price:
+5. Exchange Rate:
+
+He wants to know the best production volumes of each growing area to maximize the Foreign Exchange Earnings (FEE). 
+
+Then how should the model implementation be done?
