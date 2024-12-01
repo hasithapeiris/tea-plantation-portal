@@ -33,7 +33,7 @@ if existing_data is not None:
 new_data_list = []
 
 # Iterate over the years and months
-for year in range(2012, 2018):  # Adjust the range as needed
+for year in range(2021, 2024):  # Adjust the range as needed
     for month in range(1, 13):  # Loop over months (1 to 12)
         year_month_str = f"{year}-{month:02d}"  # Format as YYYY-MM
         if year_month_str in fetched_dates:
@@ -46,7 +46,7 @@ for year in range(2012, 2018):  # Adjust the range as needed
             "selected_category": "1692",  # Category for Export
             "selected_year": year_month_str,
             "req_type": "teaprice_data",
-            "wpsecurity": "2bae2f650f",  # Update this token if necessary
+            "wpsecurity": "7942aeb61c",  # Update this token if necessary
         }
         
         # Send POST request
