@@ -1,5 +1,11 @@
-import { Header_1 } from "../assets";
-import { Footer } from "../components";
+import {
+  Header_1,
+  Tea_Disease,
+  Tea_Export,
+  Tea_Exports,
+  Tea_Price,
+} from "../assets";
+import { Footer, SubHeader } from "../components";
 
 const Card = ({
   image,
@@ -27,53 +33,41 @@ const Card = ({
 );
 
 const Portal = () => {
+  const image = Header_1;
+  const title = "Tea Information Portal";
+  const description =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+
   const cards = [
     {
-      image: Header_1,
-      title: "FEE Info",
+      image: Tea_Export,
+      title: "FEE Information",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       link: "/portal/forex",
     },
     {
-      image: "https://via.placeholder.com/300x200",
-      title: "Link to Resource 2",
+      image: Tea_Exports,
+      title: "Demand Information",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "https://example.com/resource2",
+      link: "/portal/demand",
     },
     {
-      image: "https://via.placeholder.com/300x200",
-      title: "Link to Resource 3",
+      image: Tea_Disease,
+      title: "Disease Information",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "https://example.com/resource3",
+      link: "/portal/disease",
     },
     {
-      image: "https://via.placeholder.com/300x200",
-      title: "Link to Resource 4",
+      image: Tea_Price,
+      title: "Price Information",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "https://example.com/resource4",
+      link: "/portal/price",
     },
   ];
 
   return (
     <>
-      <div className="relative h-96">
-        <img
-          src={Header_1}
-          alt="cover-image"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-70" />
-        <div className="wrapper-header absolute inset-0 flex flex-col justify-center items-center text-center text-white py-12">
-          <h1 className="font-heading text-3xl font-extrabold mb-4 animate-fade-in md:text-5xl">
-            Tea Information Portal
-          </h1>
-          <p className="text-base md:text-lg font-normal mb-4 animate-fade-in-delay">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit
-            amet nisl non urna fringilla cursus vitae nec metus. Suspendisse
-            malesuada sodales varius.
-          </p>
-        </div>
-      </div>
+      <SubHeader image={image} title={title} description={description} />
       <div className="wrapper flex flex-col items-center py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, index) => (

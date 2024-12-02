@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { InputFormState, PredictionResult } from "../types";
 import { No_Data, Tea_Export } from "../assets";
-import { Footer } from "../components";
+import { Footer, SubHeader } from "../components";
 
 const ForexPrediction: React.FC = () => {
   const [formData, setFormData] = useState<InputFormState>({
@@ -18,6 +18,11 @@ const ForexPrediction: React.FC = () => {
   const [prediction, setPrediction] = useState<PredictionResult | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+
+  const image = Tea_Export;
+  const title = "Predict Foreign Exchange Earnings (FEE)";
+  const description =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
@@ -47,24 +52,7 @@ const ForexPrediction: React.FC = () => {
 
   return (
     <>
-      <div className="relative h-96 bg-slate-800">
-        <img
-          src={Tea_Export}
-          alt="cover-image"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-80" />
-        <div className="wrapper-header absolute inset-0 flex flex-col justify-center items-center text-center text-white pt-8">
-          <h1 className="font-heading text-3xl font-extrabold mb-4 animate-fade-in md:text-5xl">
-            Predict Foreign Exchange Earnings (FEE)
-          </h1>
-          <p className="text-base md:text-lg font-normal mb-4 animate-fade-in-delay">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit
-            amet nisl non urna fringilla cursus vitae nec metus. Suspendisse
-            malesuada sodales varius.
-          </p>
-        </div>
-      </div>
+      <SubHeader image={image} title={title} description={description} />
       <div className="wrapper py-12">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Input Form */}

@@ -5,7 +5,7 @@ import { Header_1, Header_2, Header_3 } from "../assets";
 const slides = [
   {
     image: Header_1,
-    text: "WELOCME TO TEA PLANTATION PORTAL",
+    text: "WELOCME TO TEA INFORMATION PORTAL",
     subText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.",
   },
@@ -43,7 +43,7 @@ const MainCarousel: React.FC = () => {
   }, [current]);
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+    <div className="relative min-h-screen bg-slate-800 w-full overflow-hidden">
       <div
         className="flex transition-transform duration-500"
         style={{ transform: `translateX(-${current * 100}%)` }}
