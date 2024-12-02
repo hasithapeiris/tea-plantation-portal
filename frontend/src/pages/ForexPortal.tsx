@@ -2,20 +2,20 @@ import { Header_1, Tea_Export } from "../assets";
 
 const Card = ({
   image,
-  description,
+  title,
   link,
 }: {
   image: string;
-  description: string;
+  title: string;
   link: string;
 }) => (
   <a
     href={link}
     className="block bg-white border rounded-lg overflow-hidden transition-transform transform hover:scale-105"
   >
-    <img src={image} alt={description} className="w-full h-48 object-cover" />
+    <img src={image} alt={title} className="w-full h-48 object-cover" />
     <div className="p-4">
-      <p className="text-gray-700 font-semibold">{description}</p>
+      <h2 className="text-gray-700 text-lg font-semibold">{title}</h2>
     </div>
   </a>
 );
@@ -24,32 +24,32 @@ const ForexPortal = () => {
   const cards = [
     {
       image: Tea_Export,
-      description: "FEE Prediction",
+      title: "FEE Prediction",
       link: "/portal/forex/fee",
     },
     {
       image: "https://via.placeholder.com/300x200",
-      description: "Link to Resource 2",
+      title: "Link to Resource 2",
       link: "https://example.com/resource2",
     },
     {
       image: "https://via.placeholder.com/300x200",
-      description: "Link to Resource 3",
+      title: "Link to Resource 3",
       link: "https://example.com/resource3",
     },
     {
       image: Header_1,
-      description: "FEE Prediction",
+      title: "FEE Prediction",
       link: "/portal/forex/fee",
     },
     {
       image: "https://via.placeholder.com/300x200",
-      description: "Link to Resource 2",
+      title: "Link to Resource 2",
       link: "https://example.com/resource2",
     },
     {
       image: "https://via.placeholder.com/300x200",
-      description: "Link to Resource 3",
+      title: "Link to Resource 3",
       link: "https://example.com/resource3",
     },
   ];
@@ -80,7 +80,7 @@ const ForexPortal = () => {
             <Card
               key={index}
               image={card.image}
-              description={card.description}
+              title={card.title}
               link={card.link}
             />
           ))}

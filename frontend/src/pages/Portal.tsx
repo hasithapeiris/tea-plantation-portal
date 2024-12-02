@@ -2,10 +2,12 @@ import { Header_1 } from "../assets";
 
 const Card = ({
   image,
+  title,
   description,
   link,
 }: {
   image: string;
+  title: string;
   description: string;
   link: string;
 }) => (
@@ -17,7 +19,8 @@ const Card = ({
   >
     <img src={image} alt={description} className="w-full h-48 object-cover" />
     <div className="p-4">
-      <p className="text-gray-700 font-semibold">{description}</p>
+      <h2 className="text-gray-700 text-lg font-semibold mb-1">{title}</h2>
+      <p className="text-gray-700">{description}</p>
     </div>
   </a>
 );
@@ -26,22 +29,26 @@ const Portal = () => {
   const cards = [
     {
       image: Header_1,
-      description: "FEE Info",
+      title: "FEE Info",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       link: "/portal/forex",
     },
     {
       image: "https://via.placeholder.com/300x200",
-      description: "Link to Resource 2",
+      title: "Link to Resource 2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       link: "https://example.com/resource2",
     },
     {
       image: "https://via.placeholder.com/300x200",
-      description: "Link to Resource 3",
+      title: "Link to Resource 3",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       link: "https://example.com/resource3",
     },
     {
       image: "https://via.placeholder.com/300x200",
-      description: "Link to Resource 4",
+      title: "Link to Resource 4",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       link: "https://example.com/resource4",
     },
   ];
@@ -72,6 +79,7 @@ const Portal = () => {
             <Card
               key={index}
               image={card.image}
+              title={card.title}
               description={card.description}
               link={card.link}
             />
