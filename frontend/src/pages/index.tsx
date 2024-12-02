@@ -1,3 +1,4 @@
+import Home from "./Home";
 import ForexPrediction from "./ForexPrediction";
 
-export { ForexPrediction };
+export { Home, ForexPrediction };

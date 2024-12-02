@@ -1,12 +1,16 @@
 import "./App.css";
-import { ForexPrediction } from "./pages";
+import { Home, ForexPrediction } from "./pages";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      <ForexPrediction />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/forex-predict" element={<ForexPrediction />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
