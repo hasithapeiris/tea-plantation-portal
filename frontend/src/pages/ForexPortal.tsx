@@ -1,4 +1,4 @@
-import { Header_1 } from "../assets";
+import { Header_1, Tea_Export } from "../assets";
 
 const Card = ({
   image,
@@ -11,9 +11,7 @@ const Card = ({
 }) => (
   <a
     href={link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
+    className="block bg-white border rounded-lg overflow-hidden transition-transform transform hover:scale-105"
   >
     <img src={image} alt={description} className="w-full h-48 object-cover" />
     <div className="p-4">
@@ -25,7 +23,7 @@ const Card = ({
 const ForexPortal = () => {
   const cards = [
     {
-      image: Header_1,
+      image: Tea_Export,
       description: "FEE Prediction",
       link: "/portal/forex/fee",
     },
@@ -67,7 +65,7 @@ const ForexPortal = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-70" />
         <div className="wrapper-header absolute inset-0 flex flex-col justify-center items-center text-center text-white py-12">
           <h1 className="font-heading text-3xl font-extrabold mb-4 animate-fade-in md:text-5xl">
-            Tea Information ForexPortal
+            Tea Information Forex Portal
           </h1>
           <p className="text-base md:text-lg font-normal mb-4 animate-fade-in-delay">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit

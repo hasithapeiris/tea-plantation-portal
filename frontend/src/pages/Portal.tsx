@@ -13,7 +13,7 @@ const Card = ({
     href={link}
     target="_blank"
     rel="noopener noreferrer"
-    className="block bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
+    className="block bg-white border rounded-lg overflow-hidden transition-transform transform hover:scale-105"
   >
     <img src={image} alt={description} className="w-full h-48 object-cover" />
     <div className="p-4">
@@ -66,8 +66,7 @@ const Portal = () => {
           </p>
         </div>
       </div>
-      <div className="wrapper flex flex-col items-center">
-        <h1 className="text-2xl font-bold mb-6">Explore Resources</h1>
+      <div className="wrapper flex flex-col items-center py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, index) => (
             <Card

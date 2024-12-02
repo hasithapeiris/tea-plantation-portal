@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { InputFormState, PredictionResult } from "../types";
-import { Header_1 } from "../assets";
+import { No_Data, Tea_Export } from "../assets";
 
 const ForexPrediction: React.FC = () => {
   const [formData, setFormData] = useState<InputFormState>({
@@ -46,16 +46,16 @@ const ForexPrediction: React.FC = () => {
 
   return (
     <>
-      <div className="relative h-96">
+      <div className="relative h-96 bg-slate-800">
         <img
-          src={Header_1}
+          src={Tea_Export}
           alt="cover-image"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-70" />
-        <div className="wrapper-header absolute inset-0 flex flex-col justify-center items-center text-center text-white py-12">
+        <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-80" />
+        <div className="wrapper-header absolute inset-0 flex flex-col justify-center items-center text-center text-white pt-8">
           <h1 className="font-heading text-3xl font-extrabold mb-4 animate-fade-in md:text-5xl">
-            FEE & Production Portal
+            Predict Foreign Exchange Earnings (FEE)
           </h1>
           <p className="text-base md:text-lg font-normal mb-4 animate-fade-in-delay">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit
@@ -64,18 +64,14 @@ const ForexPrediction: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="wrapper">
-        <h1 className="text-3xl font-bold text-center mb-6">
-          Predict Foreign Exchange Earnings (FEE)
-        </h1>
-
+      <div className="wrapper py-12">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Input Form */}
           <form
-            className="bg-white shadow-lg rounded-lg p-6"
+            className="bg-white rounded-lg p-6 border"
             onSubmit={handleSubmit}
           >
-            <h2 className="text-xl font-semibold mb-4">Input Features</h2>
+            <h2 className="text-2xl font-semibold mb-4">Input Features</h2>
 
             <div className="mb-4">
               <label htmlFor="date" className="block text-sm font-medium mb-1">
@@ -87,7 +83,7 @@ const ForexPrediction: React.FC = () => {
                 name="date"
                 value={formData.date}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring focus:outline-none"
+                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -105,7 +101,7 @@ const ForexPrediction: React.FC = () => {
                 name="productionHigh"
                 value={formData.productionHigh}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring focus:outline-none"
+                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -123,7 +119,7 @@ const ForexPrediction: React.FC = () => {
                 name="productionMedium"
                 value={formData.productionMedium}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring focus:outline-none"
+                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -141,7 +137,7 @@ const ForexPrediction: React.FC = () => {
                 name="productionLow"
                 value={formData.productionLow}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring focus:outline-none"
+                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -159,7 +155,7 @@ const ForexPrediction: React.FC = () => {
                 name="exportQuantity"
                 value={formData.exportQuantity}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring focus:outline-none"
+                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -177,7 +173,7 @@ const ForexPrediction: React.FC = () => {
                 name="exportPrice"
                 value={formData.exportPrice}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring focus:outline-none"
+                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -195,14 +191,14 @@ const ForexPrediction: React.FC = () => {
                 name="exchangeRate"
                 value={formData.exchangeRate}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring focus:outline-none"
+                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+              className="w-full font-semibold bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
               disabled={loading}
             >
               {loading ? "Predicting..." : "Predict"}
@@ -210,9 +206,11 @@ const ForexPrediction: React.FC = () => {
           </form>
 
           {/* Prediction Results */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-4">Prediction Results</h2>
-            {loading && <p className="text-blue-500">Fetching prediction...</p>}
+          <div className="bg-white rounded-lg p-6 border">
+            <h2 className="text-2xl font-semibold mb-4">Prediction Results</h2>
+            {loading && (
+              <p className="text-green-500">Fetching prediction...</p>
+            )}
             {error && <p className="text-red-500">{error}</p>}
             {prediction ? (
               <div>
@@ -235,9 +233,16 @@ const ForexPrediction: React.FC = () => {
               </div>
             ) : (
               !loading && (
-                <p className="text-gray-500">
-                  Enter inputs to see predictions.
-                </p>
+                <>
+                  <p className="text-gray-500">
+                    Enter inputs to see predictions.
+                  </p>
+                  <img
+                    src={No_Data}
+                    alt="No Data"
+                    className="w-96 m-auto pt-12"
+                  />
+                </>
               )
             )}
           </div>
