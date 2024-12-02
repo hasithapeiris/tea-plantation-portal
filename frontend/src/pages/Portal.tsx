@@ -1,4 +1,5 @@
 import { Header_1 } from "../assets";
+import { Footer } from "../components";
 
 const Card = ({
   image,
@@ -86,6 +87,7 @@ const Portal = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

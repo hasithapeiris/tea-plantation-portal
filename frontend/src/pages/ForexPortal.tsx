@@ -1,4 +1,12 @@
-import { Header_1, Tea_Export } from "../assets";
+import {
+  Header_1,
+  Header_2,
+  Header_3,
+  Tea_Export,
+  Tea_Exports,
+  Tea_Production,
+} from "../assets";
+import { Footer } from "../components";
 
 const Card = ({
   image,
@@ -28,28 +36,28 @@ const ForexPortal = () => {
       link: "/portal/forex/fee",
     },
     {
-      image: "https://via.placeholder.com/300x200",
-      title: "Link to Resource 2",
+      image: Header_1,
+      title: "Production Plan (Low Grown)",
       link: "https://example.com/resource2",
     },
     {
-      image: "https://via.placeholder.com/300x200",
-      title: "Link to Resource 3",
+      image: Header_2,
+      title: "Production Plan (Mid Grown)",
       link: "https://example.com/resource3",
     },
     {
-      image: Header_1,
-      title: "FEE Prediction",
-      link: "/portal/forex/fee",
+      image: Header_3,
+      title: "Production Plan (High Grown)",
+      link: "#",
     },
     {
-      image: "https://via.placeholder.com/300x200",
-      title: "Link to Resource 2",
+      image: Tea_Exports,
+      title: "Tea Exports Data",
       link: "https://example.com/resource2",
     },
     {
-      image: "https://via.placeholder.com/300x200",
-      title: "Link to Resource 3",
+      image: Tea_Production,
+      title: "Tea Production Data",
       link: "https://example.com/resource3",
     },
   ];
@@ -86,6 +94,7 @@ const ForexPortal = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
