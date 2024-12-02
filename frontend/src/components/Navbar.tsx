@@ -19,11 +19,8 @@ const Navbar: React.FC = () => {
           <a href="#about" className="text-white hover:text-yellow-300">
             About
           </a>
-          <Link
-            to="/forex-predict"
-            className="text-white hover:text-yellow-300"
-          >
-            FEE
+          <Link to="/portal" className="text-white hover:text-yellow-300">
+            Portal
           </Link>
           <a href="#benefits" className="text-white hover:text-yellow-300">
             Benefits

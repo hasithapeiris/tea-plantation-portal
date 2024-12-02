@@ -1,6 +1,6 @@
 import "./App.css";
 import { Navbar } from "./components";
-import { Home, ForexPrediction } from "./pages";
+import { Home, ForexPrediction, Portal, ForexPortal } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App: React.FC = () => {
@@ -9,7 +9,9 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/forex-predict" element={<ForexPrediction />} />
+        <Route path="/portal" element={<Portal />} />
+        <Route path="/portal/forex" element={<ForexPortal />} />
+        <Route path="/portal/forex/fee" element={<ForexPrediction />} />
       </Routes>
     </Router>
   );
