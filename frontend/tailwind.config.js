@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Poppins", "sans-serif"],
+        body: ["Inter", "sans-serif"],
         heading: ["DM Sans", "sans-serif"],
       },
       keyframes: {
