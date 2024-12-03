@@ -34,8 +34,8 @@ const ForexPrediction: React.FC = () => {
 
     try {
       const response = await axios.post<PredictionResult>(
-        //"https://tea-plantation-portal.onrender.com/predict",
-        "http://localhost:5000/predict",
+        "https://tea-plantation-portal.onrender.com/predict",
+        //"http://localhost:5000/predict",
         formData
       );
       setPrediction(response.data);

@@ -2,7 +2,7 @@ import { Header_3 } from "../assets";
 
 const Footer = () => {
   return (
-    <div className="relative h-60">
+    <div className="relative h-60 mt-4">
       <img
         src={Header_3}
         alt="cover-image"

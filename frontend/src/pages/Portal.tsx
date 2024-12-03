@@ -68,7 +68,7 @@ const Portal = () => {
   return (
     <>
       <SubHeader image={image} title={title} description={description} />
-      <div className="wrapper flex flex-col items-center py-12">
+      <div className="wrapper flex flex-col items-center pt-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, index) => (
             <Card
