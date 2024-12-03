@@ -1,16 +1,14 @@
 export interface InputFormState {
-  date: string; // Format: YYYY-MM
-  productionHigh: number;
-  productionMedium: number;
-  productionLow: number;
+  year: number;
+  month: number;
   exportQuantity: number;
   exportPrice: number;
   exchangeRate: number;
 }
 
 export interface PredictionResult {
-  productionHigh: number;
-  productionMedium: number;
-  productionLow: number;
+  HighGrownProduction: number;
+  MediumGrownProduction: number;
+  LowGrownProduction: number;
   maxFEE: number;
 }

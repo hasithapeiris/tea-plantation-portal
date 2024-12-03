@@ -6,10 +6,8 @@ import { Footer, SubHeader } from "../components";
 
 const ForexPrediction: React.FC = () => {
   const [formData, setFormData] = useState<InputFormState>({
-    date: "",
-    productionHigh: 0,
-    productionMedium: 0,
-    productionLow: 0,
+    year: 0,
+    month: 0,
     exportQuantity: 0,
     exportPrice: 0,
     exchangeRate: 0,
@@ -36,7 +34,8 @@ const ForexPrediction: React.FC = () => {
 
     try {
       const response = await axios.post<PredictionResult>(
-        "https://tea-plantation-portal.onrender.com/predict",
+        //"https://tea-plantation-portal.onrender.com/predict",
+        "http://localhost:5000/predict",
         formData
       );
       setPrediction(response.data);
@@ -63,70 +62,31 @@ const ForexPrediction: React.FC = () => {
             <h2 className="text-2xl font-semibold mb-4">Input Features</h2>
 
             <div className="mb-4">
-              <label htmlFor="date" className="block text-sm font-medium mb-1">
-                Date (Year, Month):
+              <label htmlFor="year" className="block text-sm font-medium mb-1">
+                Year:
               </label>
               <input
-                type="date"
-                id="date"
-                name="date"
-                value={formData.date}
+                type="number"
+                id="year"
+                name="year"
+                value={formData.year}
                 onChange={handleChange}
-                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
+                className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="productionHigh"
-                className="block text-sm font-medium mb-1"
-              >
-                Production (High Grown):
+              <label htmlFor="month" className="block text-sm font-medium mb-1">
+                Month:
               </label>
               <input
                 type="number"
-                id="productionHigh"
-                name="productionHigh"
-                value={formData.productionHigh}
+                id="month"
+                name="month"
+                value={formData.month}
                 onChange={handleChange}
-                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
-                required
-              />
-            </div>
-
-            <div className="mb-4">
-              <label
-                htmlFor="productionMedium"
-                className="block text-sm font-medium mb-1"
-              >
-                Production (Medium Grown):
-              </label>
-              <input
-                type="number"
-                id="productionMedium"
-                name="productionMedium"
-                value={formData.productionMedium}
-                onChange={handleChange}
-                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
-                required
-              />
-            </div>
-
-            <div className="mb-4">
-              <label
-                htmlFor="productionLow"
-                className="block text-sm font-medium mb-1"
-              >
-                Production (Low Grown):
-              </label>
-              <input
-                type="number"
-                id="productionLow"
-                name="productionLow"
-                value={formData.productionLow}
-                onChange={handleChange}
-                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
+                className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -144,7 +104,7 @@ const ForexPrediction: React.FC = () => {
                 name="exportQuantity"
                 value={formData.exportQuantity}
                 onChange={handleChange}
-                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
+                className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -162,7 +122,7 @@ const ForexPrediction: React.FC = () => {
                 name="exportPrice"
                 value={formData.exportPrice}
                 onChange={handleChange}
-                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
+                className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -180,7 +140,7 @@ const ForexPrediction: React.FC = () => {
                 name="exchangeRate"
                 value={formData.exchangeRate}
                 onChange={handleChange}
-                className="appearance-none bg-transparent border-b-2 border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
+                className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
               />
             </div>
@@ -202,23 +162,74 @@ const ForexPrediction: React.FC = () => {
             )}
             {error && <p className="text-red-500">{error}</p>}
             {prediction ? (
-              <div>
-                <p>
-                  <strong>High Grown Production:</strong>{" "}
-                  {prediction.productionHigh} kg
-                </p>
-                <p>
-                  <strong>Medium Grown Production:</strong>{" "}
-                  {prediction.productionMedium} kg
-                </p>
-                <p>
-                  <strong>Low Grown Production:</strong>{" "}
-                  {prediction.productionLow} kg
-                </p>
-                <p>
-                  <strong>Predicted Maximum FEE:</strong> $
-                  {prediction.maxFEE.toFixed(2)}
-                </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* High Grown Production */}
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                  <img
+                    src="path_to_high_grown_icon" // replace with actual icon path
+                    alt="High Grown"
+                    className="w-8 h-8 mr-4"
+                  />
+                  <div>
+                    <p className="font-semibold text-lg">
+                      High Grown Production
+                    </p>
+                    <p className="text-xl font-bold">
+                      {prediction.HighGrownProduction} kg
+                    </p>
+                  </div>
+                </div>
+
+                {/* Medium Grown Production */}
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                  <img
+                    src="path_to_medium_grown_icon" // replace with actual icon path
+                    alt="Medium Grown"
+                    className="w-8 h-8 mr-4"
+                  />
+                  <div>
+                    <p className="font-semibold text-lg">
+                      Medium Grown Production
+                    </p>
+                    <p className="text-xl font-bold">
+                      {prediction.MediumGrownProduction} kg
+                    </p>
+                  </div>
+                </div>
+
+                {/* Low Grown Production */}
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                  <img
+                    src="path_to_low_grown_icon" // replace with actual icon path
+                    alt="Low Grown"
+                    className="w-8 h-8 mr-4"
+                  />
+                  <div>
+                    <p className="font-semibold text-lg">
+                      Low Grown Production
+                    </p>
+                    <p className="text-xl font-bold">
+                      {prediction.LowGrownProduction} kg
+                    </p>
+                  </div>
+                </div>
+
+                {/* Predicted Maximum FEE */}
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                  <img
+                    src="path_to_fee_icon" // replace with actual icon path
+                    alt="Maximum FEE"
+                    className="w-8 h-8 mr-4"
+                  />
+                  <div>
+                    <p className="font-semibold text-lg">
+                      Predicted Maximum FEE
+                    </p>
+                    <p className="text-xl font-bold">
+                      ${prediction.maxFEE.toFixed(2)}
+                    </p>
+                  </div>
+                </div>
               </div>
             ) : (
               !loading && (

@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from scripts.forex_prediction import predict_fee
+from scripts.forex_pred_grid import predict_best_fee
 
 app = Flask(__name__)
 CORS(app)
