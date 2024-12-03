@@ -52,7 +52,7 @@ const ForexPrediction: React.FC = () => {
   return (
     <>
       <SubHeader image={image} title={title} description={description} />
-      <div className="wrapper py-12">
+      <div className="wrapper-header pt-14">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Input Form */}
           <form
@@ -162,13 +162,13 @@ const ForexPrediction: React.FC = () => {
             )}
             {error && <p className="text-red-500">{error}</p>}
             {prediction ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 gap-4">
                 {/* High Grown Production */}
-                <div className="flex items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
                   <img
-                    src="path_to_high_grown_icon" // replace with actual icon path
+                    src="/icon.png"
                     alt="High Grown"
-                    className="w-8 h-8 mr-4"
+                    className="w-12 h-12 mr-4"
                   />
                   <div>
                     <p className="font-semibold text-lg">
@@ -181,11 +181,11 @@ const ForexPrediction: React.FC = () => {
                 </div>
 
                 {/* Medium Grown Production */}
-                <div className="flex items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
                   <img
-                    src="path_to_medium_grown_icon" // replace with actual icon path
+                    src="/icon.png"
                     alt="Medium Grown"
-                    className="w-8 h-8 mr-4"
+                    className="w-12 h-12 mr-4"
                   />
                   <div>
                     <p className="font-semibold text-lg">
@@ -198,11 +198,11 @@ const ForexPrediction: React.FC = () => {
                 </div>
 
                 {/* Low Grown Production */}
-                <div className="flex items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
                   <img
-                    src="path_to_low_grown_icon" // replace with actual icon path
+                    src="/icon.png"
                     alt="Low Grown"
-                    className="w-8 h-8 mr-4"
+                    className="w-12 h-12 mr-4"
                   />
                   <div>
                     <p className="font-semibold text-lg">
@@ -215,11 +215,11 @@ const ForexPrediction: React.FC = () => {
                 </div>
 
                 {/* Predicted Maximum FEE */}
-                <div className="flex items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
                   <img
-                    src="path_to_fee_icon" // replace with actual icon path
+                    src="/coin.png"
                     alt="Maximum FEE"
-                    className="w-8 h-8 mr-4"
+                    className="w-12 h-12 mr-4"
                   />
                   <div>
                     <p className="font-semibold text-lg">
