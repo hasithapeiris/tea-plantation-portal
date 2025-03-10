@@ -6,11 +6,8 @@ import { Footer, SubHeader } from "../components";
 
 const ForexPrediction: React.FC = () => {
   const [formData, setFormData] = useState<InputFormState>({
-    year: 0,
     month: 0,
-    exportQuantity: 0,
-    exportPrice: 0,
-    exchangeRate: 0,
+    production: 0,
   });
 
   const [prediction, setPrediction] = useState<PredictionResult | null>(null);
@@ -54,34 +51,18 @@ const ForexPrediction: React.FC = () => {
       <SubHeader image={image} title={title} description={description} />
       <div className="wrapper-header pt-14">
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Input Form */}
           <form
-            className="bg-white rounded-lg p-6 border"
+            className="bg-white rounded-lg p-6 border h-fit"
             onSubmit={handleSubmit}
           >
             <h2 className="text-2xl font-semibold mb-4">Input Features</h2>
 
             <div className="mb-4">
-              <label htmlFor="year" className="block text-sm font-medium mb-1">
-                Year:
-              </label>
-              <input
-                type="number"
-                id="year"
-                name="year"
-                value={formData.year}
-                onChange={handleChange}
-                className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
-                required
-              />
-            </div>
-
-            <div className="mb-4">
               <label htmlFor="month" className="block text-sm font-medium mb-1">
-                Month:
+                Year & Month:
               </label>
               <input
-                type="number"
+                type="month"
                 id="month"
                 name="month"
                 value={formData.month}
@@ -93,52 +74,16 @@ const ForexPrediction: React.FC = () => {
 
             <div className="mb-4">
               <label
-                htmlFor="exportQuantity"
+                htmlFor="production"
                 className="block text-sm font-medium mb-1"
               >
-                Export Quantity:
+                National Production:
               </label>
               <input
                 type="number"
-                id="exportQuantity"
-                name="exportQuantity"
-                value={formData.exportQuantity}
-                onChange={handleChange}
-                className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
-                required
-              />
-            </div>
-
-            <div className="mb-4">
-              <label
-                htmlFor="exportPrice"
-                className="block text-sm font-medium mb-1"
-              >
-                Export Price:
-              </label>
-              <input
-                type="number"
-                id="exportPrice"
-                name="exportPrice"
-                value={formData.exportPrice}
-                onChange={handleChange}
-                className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
-                required
-              />
-            </div>
-
-            <div className="mb-4">
-              <label
-                htmlFor="exchangeRate"
-                className="block text-sm font-medium mb-1"
-              >
-                Exchange Rate:
-              </label>
-              <input
-                type="number"
-                id="exchangeRate"
-                name="exchangeRate"
-                value={formData.exchangeRate}
+                id="production"
+                name="production"
+                value={formData.production}
                 onChange={handleChange}
                 className="appearance-none bg-transparent border-b border-gray-300 w-full text-gray-900 p-3 leading-tight focus:outline-none focus:border-green-500"
                 required
@@ -171,12 +116,8 @@ const ForexPrediction: React.FC = () => {
                     className="w-12 h-12 mr-4"
                   />
                   <div>
-                    <p className="font-semibold text-lg">
-                      High Grown Production
-                    </p>
-                    <p className="text-xl font-bold">
-                      {prediction.HighGrownProduction} kg
-                    </p>
+                    <p className="font-semibold text-lg">FEE (USD)</p>
+                    <p className="text-xl font-bold">{prediction.feeUsd} kg</p>
                   </div>
                 </div>
 
@@ -188,46 +129,8 @@ const ForexPrediction: React.FC = () => {
                     className="w-12 h-12 mr-4"
                   />
                   <div>
-                    <p className="font-semibold text-lg">
-                      Medium Grown Production
-                    </p>
-                    <p className="text-xl font-bold">
-                      {prediction.MediumGrownProduction} kg
-                    </p>
-                  </div>
-                </div>
-
-                {/* Low Grown Production */}
-                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
-                  <img
-                    src="/icon.png"
-                    alt="Low Grown"
-                    className="w-12 h-12 mr-4"
-                  />
-                  <div>
-                    <p className="font-semibold text-lg">
-                      Low Grown Production
-                    </p>
-                    <p className="text-xl font-bold">
-                      {prediction.LowGrownProduction} kg
-                    </p>
-                  </div>
-                </div>
-
-                {/* Predicted Maximum FEE */}
-                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
-                  <img
-                    src="/coin.png"
-                    alt="Maximum FEE"
-                    className="w-12 h-12 mr-4"
-                  />
-                  <div>
-                    <p className="font-semibold text-lg">
-                      Predicted Maximum FEE
-                    </p>
-                    <p className="text-xl font-bold">
-                      ${prediction.maxFEE.toFixed(2)}
-                    </p>
+                    <p className="font-semibold text-lg">FEE (LKR)</p>
+                    <p className="text-xl font-bold">{prediction.feeLkr} kg</p>
                   </div>
                 </div>
               </div>
