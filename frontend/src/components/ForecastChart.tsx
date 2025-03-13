@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import {
   LineChart,
   Line,
@@ -39,17 +40,32 @@ const mockData = [
 ];
 
 const ForecastChart = () => {
-  const [filteredData, setFilteredData] = useState(mockData);
+  const [data, setData] = useState([]);
   const [dateRange, setDateRange] = useState({ start: "", end: "" });
 
-  // Filter data based on date range
-  const handleFilter = () => {
-    const { start, end } = dateRange;
-    if (!start || !end) return;
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-    const newData = mockData.filter((d) => d.Date >= start && d.Date <= end);
-    setFilteredData(newData);
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/api/forex-forecast"
+      );
+      setData(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
+
+  // Filter data based on date range
+  // const handleFilter = () => {
+  //   const { start, end } = dateRange;
+  //   if (!start || !end) return;
+
+  //   const filteredData = data.filter((d) => d.Date >= start && d.Date <= end);
+  //   setData(filteredData);
+  // };
 
   return (
     <div className="p-4 bg-white border rounded-lg">
@@ -70,7 +86,7 @@ const ForecastChart = () => {
           className="border p-2 rounded"
         />
         <button
-          onClick={handleFilter}
+          //onClick={handleFilter}
           className="bg-green-500 text-white px-4 py-2 rounded-md"
         >
           Filter
@@ -79,7 +95,7 @@ const ForecastChart = () => {
 
       {/* Chart */}
       <ResponsiveContainer width="100%" height={400}>
-        <LineChart data={filteredData}>
+        <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="Date" />
           <YAxis />

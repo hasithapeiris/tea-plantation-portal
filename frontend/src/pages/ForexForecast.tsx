@@ -5,6 +5,7 @@ const ForexForecast = () => {
   const title = "Forecasted Foreign Exchange Earnings";
   const description =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+
   return (
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
