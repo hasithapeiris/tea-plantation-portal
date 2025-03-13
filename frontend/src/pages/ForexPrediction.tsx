@@ -14,7 +14,6 @@ const ForexPrediction: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const image = Tea_Export;
   const title = "Predict Foreign Exchange Earnings (FEE)";
   const description =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
@@ -48,7 +47,7 @@ const ForexPrediction: React.FC = () => {
 
   return (
     <>
-      <SubHeader image={image} title={title} description={description} />
+      <SubHeader image={Tea_Export} title={title} description={description} />
       <div className="wrapper-header pt-14">
         <div className="grid md:grid-cols-2 gap-8">
           <form

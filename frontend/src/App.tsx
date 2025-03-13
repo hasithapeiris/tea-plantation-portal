@@ -1,6 +1,12 @@
 import "./App.css";
 import { Navbar } from "./components";
-import { Home, ForexPrediction, Portal, ForexPortal } from "./pages";
+import {
+  Home,
+  ForexPrediction,
+  Portal,
+  ForexPortal,
+  ForexForecast,
+} from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App: React.FC = () => {
@@ -12,6 +18,7 @@ const App: React.FC = () => {
         <Route path="/portal" element={<Portal />} />
         <Route path="/portal/forex" element={<ForexPortal />} />
         <Route path="/portal/forex/fee" element={<ForexPrediction />} />
+        <Route path="/portal/forex/fee-forecast" element={<ForexForecast />} />
       </Routes>
     </Router>
   );
