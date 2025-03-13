@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const forexSchema = new mongoose.Schema({
-  date: String,
-  forecastedProduction: Number,
-  forecastedForexEarnings: Number,
+  Date: String,
+  Forecasted_Production: Number,
+  Forecasted_Forex_Earnings: Number,
 });
 
 const Forex = mongoose.model("Forex", forexSchema);
