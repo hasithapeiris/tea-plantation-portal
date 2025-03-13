@@ -43,27 +43,27 @@ const ForexPortal = () => {
     {
       image: Header_1,
       title: "Low Grown Forecast",
-      link: "https://example.com/resource2",
+      link: "/portal/forex/low-grown-forecast",
     },
     {
       image: Header_2,
       title: "Mid Grown Forecast",
-      link: "https://example.com/resource3",
+      link: "/portal/forex/mid-grown-forecast",
     },
     {
       image: Header_3,
       title: "High Grown Forecast",
-      link: "#",
+      link: "/portal/forex/high-grown-forecast",
     },
     {
       image: Tea_Exports,
       title: "National Production Forecast",
-      link: "https://example.com/resource2",
+      link: "/portal/forex/national-production-forecast",
     },
     {
       image: Tea_Production,
       title: "FEE Forecast",
-      link: "https://example.com/resource3",
+      link: "/portal/forex/fee-forecast",
     },
   ];
 
