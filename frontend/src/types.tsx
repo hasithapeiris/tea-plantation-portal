@@ -7,3 +7,23 @@ export interface PredictionResult {
   feeUsd: number;
   feeLkr: number;
 }
+
+interface ChartData {
+  [key: string]: number | string;
+}
+
+interface ChartInfo {
+  title: string;
+  description: string;
+  label: string;
+  data: ChartData[];
+}
+
+export interface Chart {
+  charts: ChartInfo[];
+}
+
+export interface MiniChartProps {
+  data: ChartData[];
+  label: string;
+}

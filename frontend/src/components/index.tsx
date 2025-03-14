@@ -3,5 +3,15 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SubHeader from "./SubHeader";
 import ForecastChart from "./ForecastChart";
+import MiniChart from "./MiniChart";
+import ChartGrid from "./ChartGrid";
 
-export { MainCarousel, Navbar, Footer, SubHeader, ForecastChart };
+export {
+  MainCarousel,
+  Navbar,
+  Footer,
+  SubHeader,
+  ForecastChart,
+  MiniChart,
+  ChartGrid,
+};
