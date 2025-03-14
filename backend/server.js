@@ -5,6 +5,7 @@ import cors from "cors";
 dotenv.config();
 import forexRoutes from "./routes/forexRouter.js";
 import productionRoutes from "./routes/productionRouter.js";
+import miniChartRoutes from "./routes/miniChartRoutes.js";
 
 const PORT = process.env.PORT || 5000;
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/forex-forecast", forexRoutes);
 app.use("/api/prod-forecast", productionRoutes);
+app.use("/api/mini-charts", miniChartRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
