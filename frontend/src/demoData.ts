@@ -40,3 +40,26 @@ export const charts = [
     ],
   },
 ];
+
+export const forex = [
+  {
+    Date: "2024-01-31",
+    Forecasted_Forex_Earnings: 1041873309158.02,
+  },
+  {
+    Date: "2024-02-29",
+    Forecasted_Forex_Earnings: 1055593690645.42,
+  },
+  {
+    Date: "2024-03-31",
+    Forecasted_Forex_Earnings: 1061537216329.43,
+  },
+  {
+    Date: "2024-04-30",
+    Forecasted_Forex_Earnings: 1064103320092.63,
+  },
+  {
+    Date: "2024-05-31",
+    Forecasted_Forex_Earnings: 1065209646320.08,
+  },
+];

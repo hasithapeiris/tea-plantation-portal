@@ -23,7 +23,7 @@ export interface Chart {
   charts: ChartInfo[];
 }
 
-export interface MiniChartProps {
+export interface ChartProps {
   data: ChartData[];
   label: string;
 }

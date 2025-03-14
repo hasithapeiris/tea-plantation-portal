@@ -9,9 +9,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { MiniChartProps } from "../types";
+import { ChartProps } from "../types";
 
-const MiniChart: FC<MiniChartProps> = ({ data, label }) => {
+const MiniChart: FC<ChartProps> = ({ data, label }) => {
   return (
     <div>
       <ResponsiveContainer width="100%" height={300}>
