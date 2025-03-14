@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import { Tea_Export } from "../assets";
 import { ChartGrid, Footer, ForecastChart, SubHeader } from "../components";
-import { charts } from "../demoData";
 import axios from "axios";
 
 const MidGrownForecast = () => {
   const [data, setData] = useState([]);
+  const [charts, setCharts] = useState([]);
   const title = "Forecasted Mid Grown Production";
   const description =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
 
   useEffect(() => {
     fetchData();
+    fetchCharts("Forecasted_Production");
   }, []);
 
   const fetchData = async () => {
@@ -22,6 +23,20 @@ const MidGrownForecast = () => {
       setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
+    }
+  };
+
+  const fetchCharts = async (label = "") => {
+    try {
+      const response = await axios.get(
+        `http://localhost:5000/api/mini-charts`,
+        {
+          params: label ? { label } : {},
+        }
+      );
+      setCharts(response.data);
+    } catch (error) {
+      console.error("Error fetching charts:", error);
     }
   };
 
