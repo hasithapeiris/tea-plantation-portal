@@ -5,25 +5,25 @@ import { Header_1, Header_2, Header_3 } from "../assets";
 const slides = [
   {
     image: Header_1,
-    text: "WELOCME TO TEA INFORMATION PORTAL",
+    text: "Welcome to Tea Information Portal",
     subText:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.",
+      "Our platform provides in-depth insights into tea production trends, export data, and global market demand, helping industry stakeholders make informed decisions.",
   },
   {
     image: Header_2,
-    text: "PREDICTIVE INFORMATION",
+    text: "Predictive Information",
     subText:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.",
-    buttonText: "READ FULL STORY",
-    buttonLink: "#news",
+      "Stay ahead with our tea production forecasting tools, powered by machine learning. Get real-time insights on production volumes, and future trends to optimize cultivation and export strategies.",
+    buttonText: "Read Full Story",
+    buttonLink: "/news",
   },
   {
     image: Header_3,
-    text: "CURRENT TRENDS",
+    text: "Current Trends",
     subText:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.",
-    buttonText: "READ FULL STORY",
-    buttonLink: "#news",
+      "Our platform analyzes forex earnings from tea exports, helping businesses understand currency fluctuations, export revenue trends, and future market predictions.",
+    buttonText: "Read Full Story",
+    buttonLink: "/news",
   },
 ];
 
@@ -62,7 +62,7 @@ const MainCarousel: React.FC = () => {
                 className="wrapper-header absolute inset-0 flex flex-col justify-center items-center text-center text-white"
               >
                 <h1 className="font-heading text-5xl font-extrabold mb-4 animate-fade-in md:text-7xl">
-                  {slide.text}
+                  {slide.text.toUpperCase()}
                 </h1>
                 {slide.subText && (
                   <p className="text-lg md:text-xl font-normal mb-4 animate-fade-in-delay">
@@ -75,7 +75,7 @@ const MainCarousel: React.FC = () => {
                     href={slide.buttonLink}
                     className="bg-yellow-300 text-black py-2 px-4 rounded-lg font-semibold animate-fade-in-extra-delay"
                   >
-                    {slide.buttonText}
+                    {slide.buttonText.toUpperCase()}
                   </a>
                 )}
               </div>

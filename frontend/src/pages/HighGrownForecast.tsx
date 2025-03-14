@@ -8,7 +8,7 @@ const HighGrownForecast = () => {
   const [charts, setCharts] = useState([]);
   const title = "Forecasted High Grown Production";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "Get future projections for high-grown tea, prized for its delicate aroma and premium quality. Plan your business with reliable forecasts for 2024-2028.";
 
   useEffect(() => {
     fetchData();

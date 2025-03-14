@@ -8,7 +8,7 @@ const LowGrownForecast = () => {
   const [charts, setCharts] = useState([]);
   const title = "Forecasted Low Grown Production";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "Forecast the production of low-grown tea region, known for its strong flavor and high demand, from 2024 to 2028. Use ARIMA-based insights to plan cultivation and exports effectively.";
 
   useEffect(() => {
     fetchData();

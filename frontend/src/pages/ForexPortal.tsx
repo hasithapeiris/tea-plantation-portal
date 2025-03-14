@@ -32,7 +32,7 @@ const ForexPortal = () => {
   const image = Header_1;
   const title = "Tea Information Forex Portal";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "Stay ahead with our tea production and forex forecasting tools, powered by machine learning. Get forecasted insights on production volumes, and foreign exchange earnings.";
 
   const cards = [
     {

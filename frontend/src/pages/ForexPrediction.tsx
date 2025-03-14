@@ -16,7 +16,7 @@ const ForexPrediction: React.FC = () => {
 
   const title = "Predict Foreign Exchange Earnings (FEE)";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "Here you can predict foreign exchange earnings based on the past production and export data. Fill the form and click predict button to get the predicted FEE.";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;

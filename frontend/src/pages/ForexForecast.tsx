@@ -8,7 +8,7 @@ const ForexForecast = () => {
   const [charts, setCharts] = useState([]);
   const title = "Forecasted Foreign Exchange Earnings";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "Forecast foreign exchange earnings affecting the tea industry. Stay prepared for currency shifts and optimize export strategies with ARIMA-driven forecasts.";
 
   useEffect(() => {
     fetchData();

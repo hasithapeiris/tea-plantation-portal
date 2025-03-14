@@ -8,7 +8,7 @@ const NationalProdForecast = () => {
   const [charts, setCharts] = useState([]);
   const title = "Forecasted National Tea Production";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "View Sri Lanka’s overall tea production forecast, integrating data from all elevations. Use these insights to anticipate industry trends and market fluctuations.";
 
   useEffect(() => {
     fetchData();

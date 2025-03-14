@@ -8,7 +8,7 @@ const MidGrownForecast = () => {
   const [charts, setCharts] = useState([]);
   const title = "Forecasted Mid Grown Production";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "Analyze mid-grown tea production trends for the next five years. Stay ahead with accurate predictions to optimize supply chain and market strategies.";
 
   useEffect(() => {
     fetchData();

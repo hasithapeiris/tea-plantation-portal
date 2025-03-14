@@ -36,31 +36,35 @@ const Portal = () => {
   const image = Header_1;
   const title = "Tea Information Portal";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "This portal provides in-depth insights into tea production trends, export data, and global market demand, helping industry stakeholders make informed decisions.";
 
   const cards = [
     {
       image: Tea_Export,
       title: "FEE Information",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "Track tea export earnings with forecasted forex insights to make informed trade decisions.",
       link: "/portal/forex",
     },
     {
       image: Tea_Exports,
       title: "Demand Information",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "Stay updated on global demand for Ceylon tea while exploring emerging markets.",
       link: "/portal/demand",
     },
     {
       image: Tea_Disease,
       title: "Disease Information",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "Get essential updates on tea plant diseases and prevention methods.",
       link: "/portal/disease",
     },
     {
       image: Tea_Price,
       title: "Price Information",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "Access the latest tea price trends from auctions and global markets.",
       link: "/portal/price",
     },
   ];
