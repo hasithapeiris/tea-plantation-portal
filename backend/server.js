@@ -4,8 +4,11 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 dotenv.config();
 import forexRoutes from "./routes/forexRouter.js";
-import productionRoutes from "./routes/productionRouter.js";
+import nationalProdRoutes from "./routes/nationalProdRouter.js";
 import miniChartRoutes from "./routes/miniChartRoutes.js";
+import lowGrownProdRoutes from "./routes/lowGrownProdRouter.js";
+import midGrownProdRoutes from "./routes/midGrownProdRouter.js";
+import highGrownProdRoutes from "./routes/highGrownProdRouter.js";
 
 const PORT = process.env.PORT || 5000;
 
@@ -20,7 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/forex-forecast", forexRoutes);
-app.use("/api/prod-forecast", productionRoutes);
+app.use("/api/national-prod", nationalProdRoutes);
+app.use("/api/low-grown-prod", lowGrownProdRoutes);
+app.use("/api/mid-grown-prod", midGrownProdRoutes);
+app.use("/api/high-grown-prod", highGrownProdRoutes);
 app.use("/api/mini-charts", miniChartRoutes);
 
 app.listen(PORT, () => {
