@@ -44,7 +44,7 @@ const ForexForecast = () => {
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
       <div className="wrapper mt-14">
-        <ForecastChart data={data} label="Forecasted_Forex_Earnings" />
+        <ForecastChart data={data} label="forecastedFee" />
         <div className="mt-8">
           <ChartGrid charts={charts} />
         </div>

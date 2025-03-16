@@ -17,7 +17,7 @@ const ForecastChart: FC<ChartProps> = ({ data, label }) => {
       <ResponsiveContainer width="100%" height={400}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="Date" />
+          <XAxis dataKey="month" />
           <YAxis />
           <Tooltip />
           <Legend />
