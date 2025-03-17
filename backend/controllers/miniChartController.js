@@ -3,8 +3,13 @@ import MiniChart from "../models/miniChartModel.js";
 // Create a new chart
 export const createChart = async (req, res) => {
   try {
-    const { title, description, label, data } = req.body;
-    const newChart = new MiniChart({ title, description, label, data });
+    const { title, description, label, label2, label3, data } = req.body;
+    const newChart = new MiniChart({
+      title,
+      description,
+      label,
+      data,
+    });
     await newChart.save();
     res
       .status(201)

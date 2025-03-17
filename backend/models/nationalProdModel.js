@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const nationalProdSchema = new mongoose.Schema({
   month: String,
-  production: Number,
+  nationalProduction: Number,
 });
 
 const NationalProd = mongoose.model("NationalProd", nationalProdSchema);

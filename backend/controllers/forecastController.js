@@ -1,8 +1,6 @@
 import Forex from "../models/forexModel.js";
 import NationalProd from "../models/nationalProdModel.js";
-import LowGrownProd from "../models/lowGrownProdModel.js";
-import MidGrownProd from "../models/midGrownProdModel.js";
-import HighGrownProd from "../models/highGrownProdModel.js";
+import RegionalProd from "../models/regionalProdModel.js";
 
 // Fetch all forecasted forex data
 export const fetchForexForecast = async (req, res) => {
@@ -25,30 +23,10 @@ export const fetchNationalProdForecast = async (req, res) => {
   }
 };
 
-// Fetch all forecasted low grown production data
-export const fetchLowGrownProdForecast = async (req, res) => {
+// Fetch all forecasted regional production data
+export const fetchRegionalProdForecast = async (req, res) => {
   try {
-    const forecasts = await LowGrownProd.find();
-    res.json(forecasts);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
-
-// Fetch all forecasted mid grown production data
-export const fetchMidGrownProdForecast = async (req, res) => {
-  try {
-    const forecasts = await MidGrownProd.find();
-    res.json(forecasts);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
-
-// Fetch all forecasted high grown production data
-export const fetchHighGrownProdForecast = async (req, res) => {
-  try {
-    const forecasts = await HighGrownProd.find();
+    const forecasts = await RegionalProd.find();
     res.json(forecasts);
   } catch (err) {
     res.status(500).json({ error: err.message });
