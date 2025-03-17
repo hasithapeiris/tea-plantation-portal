@@ -12,13 +12,13 @@ const NationalProdForecast = () => {
 
   useEffect(() => {
     fetchData();
-    fetchCharts("Forecasted_Production");
+    fetchCharts("nationalProduction");
   }, []);
 
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/forex-forecast"
+        "http://localhost:5000/api/national-prod"
       );
       setData(response.data);
     } catch (error) {
@@ -44,7 +44,7 @@ const NationalProdForecast = () => {
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
       <div className="wrapper mt-14">
-        <ForecastChart data={data} label="Forecasted_Forex_Earnings" />
+        <ForecastChart data={data} label="nationalProduction" />
         <div className="mt-8">
           <ChartGrid charts={charts} />
         </div>

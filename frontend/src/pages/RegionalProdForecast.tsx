@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Tea_Export } from "../assets";
-import { ChartGrid, Footer, ForecastChart, SubHeader } from "../components";
+import { ChartGrid, Footer, RegionalChart, SubHeader } from "../components";
 import axios from "axios";
 
-const LowGrownForecast = () => {
+const RegionalProdForecast = () => {
   const [data, setData] = useState([]);
   const [charts, setCharts] = useState([]);
   const title = "Forecasted Low Grown Production";
@@ -12,13 +12,13 @@ const LowGrownForecast = () => {
 
   useEffect(() => {
     fetchData();
-    fetchCharts("Forecasted_Production");
+    fetchCharts("regionalProd");
   }, []);
 
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/forex-forecast"
+        "http://localhost:5000/api/regional-prod"
       );
       setData(response.data);
     } catch (error) {
@@ -44,7 +44,12 @@ const LowGrownForecast = () => {
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
       <div className="wrapper mt-14">
-        <ForecastChart data={data} label="Forecasted_Forex_Earnings" />
+        <RegionalChart
+          data={data}
+          label1="lowGrownProduction"
+          label2="midGrownProduction"
+          label3="highGrownProduction"
+        />
         <div className="mt-8">
           <ChartGrid charts={charts} />
         </div>
@@ -71,4 +76,4 @@ const LowGrownForecast = () => {
   );
 };
 
-export default LowGrownForecast;
+export default RegionalProdForecast;

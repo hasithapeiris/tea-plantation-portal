@@ -27,3 +27,10 @@ export interface ChartProps {
   data: ChartData[];
   label: string;
 }
+
+export interface RegionalChartProps {
+  data: ChartData[];
+  label1: string;
+  label2: string;
+  label3: string;
+}

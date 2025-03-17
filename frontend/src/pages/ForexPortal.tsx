@@ -36,24 +36,9 @@ const ForexPortal = () => {
 
   const cards = [
     {
-      image: Tea_Export,
-      title: "FEE Prediction",
-      link: "/portal/forex/fee",
-    },
-    {
       image: Header_1,
-      title: "Low Grown Forecast",
-      link: "/portal/forex/low-grown-forecast",
-    },
-    {
-      image: Header_2,
-      title: "Mid Grown Forecast",
-      link: "/portal/forex/mid-grown-forecast",
-    },
-    {
-      image: Header_3,
-      title: "High Grown Forecast",
-      link: "/portal/forex/high-grown-forecast",
+      title: "Regional Production Forecast",
+      link: "/portal/forex/regional-production-forecast",
     },
     {
       image: Tea_Exports,
