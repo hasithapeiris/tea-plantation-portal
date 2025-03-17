@@ -1,18 +1,24 @@
 import { useEffect, useState } from "react";
 import { Tea_Export } from "../assets";
-import { ChartGrid, Footer, RegionalChart, SubHeader } from "../components";
+import {
+  Footer,
+  RegionalChart,
+  RegionalMiniChart,
+  SubHeader,
+} from "../components";
 import axios from "axios";
+import { RegionalChartType } from "../types";
 
 const RegionalProdForecast = () => {
   const [data, setData] = useState([]);
-  const [charts, setCharts] = useState([]);
+  const [charts, setCharts] = useState<RegionalChartType[]>([]);
   const title = "Forecasted Low Grown Production";
   const description =
     "Forecast the production of low-grown tea region, known for its strong flavor and high demand, from 2024 to 2028. Use ARIMA-based insights to plan cultivation and exports effectively.";
 
   useEffect(() => {
     fetchData();
-    fetchCharts("regionalProd");
+    fetchCharts("regionalProduction");
   }, []);
 
   const fetchData = async () => {
@@ -51,7 +57,20 @@ const RegionalProdForecast = () => {
           label3="highGrownProduction"
         />
         <div className="mt-8">
-          <ChartGrid charts={charts} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {charts.map((chart, index) => (
+              <div key={index} className="bg-white border rounded-lg p-4">
+                <h2 className="text-lg font-semibold mb-2">{chart.title}</h2>
+                <p className="text-gray-600 mb-4">{chart.description}</p>
+                <RegionalMiniChart
+                  data={chart.data}
+                  label1="lowGrownProduction"
+                  label2="midGrownProduction"
+                  label3="highGrownProduction"
+                />
+              </div>
+            ))}
+          </div>
         </div>
         <div className="wrapper-header mt-14 text-center text-gray-600 space-y-4">
           <p>

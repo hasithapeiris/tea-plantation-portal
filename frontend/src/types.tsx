@@ -12,6 +12,13 @@ interface ChartData {
   [key: string]: number | string;
 }
 
+interface RegionalChartData {
+  month: string;
+  lowGrownProduction: number;
+  midGrownProduction: number;
+  highGrownProduction: number;
+}
+
 interface ChartInfo {
   title: string;
   description: string;
@@ -19,8 +26,22 @@ interface ChartInfo {
   data: ChartData[];
 }
 
+interface RegionalChartInfo {
+  title: string;
+  description: string;
+  label: string;
+  data: RegionalChartData[];
+}
+
 export interface Chart {
   charts: ChartInfo[];
+}
+
+export interface RegionalChartType {
+  data: RegionalChartData[];
+  description: string;
+  title: string;
+  charts: RegionalChartInfo[];
 }
 
 export interface ChartProps {
@@ -29,7 +50,7 @@ export interface ChartProps {
 }
 
 export interface RegionalChartProps {
-  data: ChartData[];
+  data: RegionalChartData[];
   label1: string;
   label2: string;
   label3: string;

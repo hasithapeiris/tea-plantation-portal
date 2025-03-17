@@ -12,7 +12,7 @@ const ForexForecast = () => {
 
   useEffect(() => {
     fetchData();
-    fetchCharts("Forecasted_Production");
+    fetchCharts("forecastedFee");
   }, []);
 
   const fetchData = async () => {

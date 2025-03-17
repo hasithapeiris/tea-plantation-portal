@@ -9,9 +9,14 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { ChartProps } from "../types";
+import { RegionalChartProps } from "../types";
 
-const MiniChart: FC<ChartProps> = ({ data, label }) => {
+const RegionalMiniChart: FC<RegionalChartProps> = ({
+  data,
+  label1,
+  label2,
+  label3,
+}) => {
   return (
     <div>
       <ResponsiveContainer width="100%" height={300}>
@@ -21,11 +26,13 @@ const MiniChart: FC<ChartProps> = ({ data, label }) => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey={label} stroke="#82ca9d" />
+          <Line type="monotone" dataKey={label1} stroke="#50C878" />
+          <Line type="monotone" dataKey={label2} stroke="#8A9A5B" />
+          <Line type="monotone" dataKey={label3} stroke="#C9CC3F" />
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
 };
 
-export default MiniChart;
+export default RegionalMiniChart;

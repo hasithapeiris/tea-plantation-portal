@@ -6,6 +6,7 @@ import ForecastChart from "./ForecastChart";
 import MiniChart from "./MiniChart";
 import ChartGrid from "./ChartGrid";
 import RegionalChart from "./RegionalChart";
+import RegionalMiniChart from "./RegionalMiniChart";
 
 export {
   MainCarousel,
@@ -16,4 +17,5 @@ export {
   MiniChart,
   ChartGrid,
   RegionalChart,
+  RegionalMiniChart,
 };
