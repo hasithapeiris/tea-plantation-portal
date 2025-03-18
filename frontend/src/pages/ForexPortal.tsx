@@ -1,12 +1,5 @@
-import {
-  Header_1,
-  Header_2,
-  Header_3,
-  Tea_Export,
-  Tea_Exports,
-  Tea_Production,
-} from "../assets";
-import { Footer, SubHeader } from "../components";
+import { Header_1, Tea_Exports, Tea_Production } from "../assets";
+import { SubHeader } from "../components";
 
 const Card = ({
   image,
@@ -67,7 +60,6 @@ const ForexPortal = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import { Tea_Export } from "../assets";
-import {
-  Footer,
-  RegionalChart,
-  RegionalMiniChart,
-  SubHeader,
-} from "../components";
+import { RegionalChart, RegionalMiniChart, SubHeader } from "../components";
 import axios from "axios";
 import { RegionalChartType } from "../types";
 
@@ -107,7 +102,6 @@ const RegionalProdForecast = () => {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

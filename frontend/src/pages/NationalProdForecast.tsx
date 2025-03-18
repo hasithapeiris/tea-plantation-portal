@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Tea_Export } from "../assets";
-import { ChartGrid, Footer, ForecastChart, SubHeader } from "../components";
+import { ChartGrid, ForecastChart, SubHeader } from "../components";
 import axios from "axios";
 
 const NationalProdForecast = () => {
@@ -77,7 +77,6 @@ const NationalProdForecast = () => {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

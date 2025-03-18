@@ -1,9 +1,10 @@
 import React from "react";
-import { MainCarousel } from "../components";
+import { MainCarousel, Navbar } from "../components";
 
 const Home: React.FC = () => {
   return (
     <div>
+      <Navbar />
       <MainCarousel />
     </div>
   );

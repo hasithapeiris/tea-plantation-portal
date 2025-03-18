@@ -5,7 +5,7 @@ import {
   Tea_Exports,
   Tea_Price,
 } from "../assets";
-import { Footer, SubHeader } from "../components";
+import { SubHeader } from "../components";
 
 const Card = ({
   image,
@@ -85,7 +85,6 @@ const Portal = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

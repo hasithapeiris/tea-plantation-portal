@@ -7,6 +7,7 @@ import MiniChart from "./MiniChart";
 import ChartGrid from "./ChartGrid";
 import RegionalChart from "./RegionalChart";
 import RegionalMiniChart from "./RegionalMiniChart";
+import DashboardLayout from "./DashboardLayout";
 
 export {
   MainCarousel,
@@ -18,4 +19,5 @@ export {
   ChartGrid,
   RegionalChart,
   RegionalMiniChart,
+  DashboardLayout,
 };
