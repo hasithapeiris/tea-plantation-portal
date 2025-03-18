@@ -1,6 +1,7 @@
 import { FC } from "react";
 import {
   LineChart,
+  Area,
   Line,
   XAxis,
   YAxis,

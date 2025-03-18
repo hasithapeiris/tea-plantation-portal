@@ -35,6 +35,8 @@ interface RegionalChartInfo {
 
 export interface Chart {
   charts: ChartInfo[];
+  dValue1: number;
+  dValue2: number;
 }
 
 export interface RegionalChartType {
@@ -47,6 +49,8 @@ export interface RegionalChartType {
 export interface ChartProps {
   data: ChartData[];
   label: string;
+  dValue1: number;
+  dValue2: number;
 }
 
 export interface RegionalChartProps {

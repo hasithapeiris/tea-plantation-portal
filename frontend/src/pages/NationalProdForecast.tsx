@@ -55,9 +55,14 @@ const NationalProdForecast = () => {
             pariatur sapiente consectetur soluta architecto labore.
           </p>
         </div>
-        <ForecastChart data={data} label="nationalProduction" />
+        <ForecastChart
+          data={data}
+          label="nationalProduction"
+          dValue1={10}
+          dValue2={30}
+        />
         <div className="mt-8">
-          <ChartGrid charts={charts} />
+          <ChartGrid charts={charts} dValue1={10} dValue2={30} />
         </div>
         <div className="wrapper-header mt-14 text-center text-gray-600 space-y-4">
           <p>

@@ -29,8 +29,8 @@ const Navbar: React.FC = () => {
             Contact
           </a>
 
-          <Link to="/dashboard">
-            <button className="button-yellow-outline">Dashboard</button>
+          <Link to="/chat">
+            <button className="button-yellow-outline">AI Chat</button>
           </Link>
         </div>
       </div>
