@@ -14,10 +14,8 @@ const DashboardLayout = () => {
 
   const sideNavigation = [
     { key: "dashboard", label: "Dashboard", path: "/dashboard" },
-    { key: "timetables", label: "Timetables", path: "/dashboard/timetables" },
-    // { key: "notices", label: "Notices", path: "/dashboard/notices" },
-    { key: "users", label: "Users", path: "/dashboard/users" },
-    // { key: "profile", label: "Profile", path: "/dashboard/profile" },
+    { key: "chats", label: "Chats", path: "/dashboard/chat" },
+    { key: "profile", label: "Profile", path: "/dashboard/profile" },
     { key: "home", label: "Home", path: "/" },
   ];
 

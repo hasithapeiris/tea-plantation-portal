@@ -10,8 +10,11 @@ import {
   NationalProdForecast,
   RegionalProdForecast,
   Dashboard,
+  Profile,
+  ChatAgent,
 } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ChatWindow from "./pages/ChatWindow";
 
 const App: React.FC = () => {
   return (
@@ -37,7 +40,10 @@ const App: React.FC = () => {
         </Route>
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/chat" element={<ChatAgent />} />
+          <Route path="/dashboard/profile" element={<Profile />} />
         </Route>
+        <Route path="/chat" element={<ChatWindow />} />
       </Routes>
     </Router>
   );

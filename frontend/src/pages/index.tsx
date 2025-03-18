@@ -6,6 +6,8 @@ import ForexForecast from "./ForexForecast";
 import NationalProdForecast from "./NationalProdForecast";
 import RegionalProdForecast from "./RegionalProdForecast";
 import Dashboard from "./Dashboard";
+import ChatAgent from "./ChatAgent";
+import Profile from "./Profile";
 
 export {
   Home,
@@ -16,4 +18,6 @@ export {
   NationalProdForecast,
   RegionalProdForecast,
   Dashboard,
+  ChatAgent,
+  Profile,
 };
