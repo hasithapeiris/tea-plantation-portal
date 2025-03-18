@@ -12,9 +12,9 @@ import { RegionalChartType } from "../types";
 const RegionalProdForecast = () => {
   const [data, setData] = useState([]);
   const [charts, setCharts] = useState<RegionalChartType[]>([]);
-  const title = "Forecasted Low Grown Production";
+  const title = "Forecasted Regional Production";
   const description =
-    "Forecast the production of low-grown tea region, known for its strong flavor and high demand, from 2024 to 2028. Use ARIMA-based insights to plan cultivation and exports effectively.";
+    "Forecast the production of main three regions, from 2024 to 2026. Use ARIMA-based insights to plan cultivation and exports effectively.";
 
   useEffect(() => {
     fetchData();
@@ -50,6 +50,23 @@ const RegionalProdForecast = () => {
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
       <div className="wrapper mt-14">
+        <div className="wrapper-header my-14 text-center text-gray-600 space-y-4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
+            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
+            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
+            soluta architecto labore.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
+            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
+            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
+            soluta architecto labore. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Natus eum cum odio explicabo corporis quibusdam
+            possimus, voluptas fugiat, deserunt modi eius optio vitae commodi
+            pariatur sapiente consectetur soluta architecto labore.
+          </p>
+        </div>
         <RegionalChart
           data={data}
           label1="lowGrownProduction"

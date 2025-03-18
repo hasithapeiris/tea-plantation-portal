@@ -1,0 +1,80 @@
+{
+    "title": "FEE Forecast for 2026",
+    "description": "This chart shows the forecasted export earnings for year 2026.",
+    "label": "regionalProduction",
+    "data": [
+        {   
+            "month": "2026-01",
+            "lowGrownProduction": 15608476.56,
+            "midGrownProduction": 3747071.53,
+            "highGrownProduction": 4982048.74
+        },
+        {   
+            "month": "2026-02",
+            "lowGrownProduction": 14837820.43,
+            "midGrownProduction": 3451516.88,
+            "highGrownProduction": 4418342.15
+        },
+        {   
+            "month": "2026-03",
+            "lowGrownProduction": 15514576.99,
+            "midGrownProduction": 3671052.08,
+            "highGrownProduction": 4680726.91
+        },
+        {   
+            "month": "2026-04",
+            "lowGrownProduction": 15419846.72,
+            "midGrownProduction": 4064208.73,
+            "highGrownProduction": 5376711.11
+        },
+        {   
+            "month": "2026-05",
+            "lowGrownProduction": 15881438.77,
+            "midGrownProduction": 4166717.97,
+            "highGrownProduction": 5540952.14
+        },
+        {   
+            "month": "2026-06",
+            "lowGrownProduction": 15734548.4,
+            "midGrownProduction": 3920663.71,
+            "highGrownProduction": 5272426.2
+        },
+        {   
+            "month": "2026-07",
+            "lowGrownProduction": 15272373.01,
+            "midGrownProduction": 3445071.94,
+            "highGrownProduction": 4784419.84
+        },
+        {   
+            "month": "2026-08",
+            "lowGrownProduction": 15417654.61,
+            "midGrownProduction": 3503093.96,
+            "highGrownProduction": 4681748.08
+        },
+        {   
+            "month": "2026-09",
+            "lowGrownProduction": 15103387.52,
+            "midGrownProduction": 4231791.16,
+            "highGrownProduction": 5580472.99
+        },
+        {   
+            "month": "2026-10",
+            "lowGrownProduction": 15837757.06,
+            "midGrownProduction": 5200727.26,
+            "highGrownProduction": 6452926.86
+        },
+        {   
+            "month": "2026-11",
+            "lowGrownProduction": 15519809.55,
+            "midGrownProduction": 4893807.86,
+            "highGrownProduction": 6742440.19
+        },
+        {   
+            "month": "2026-12",
+            "lowGrownProduction": 15741635.83,
+            "midGrownProduction": 4375531.61,
+            "highGrownProduction": 6232754.47
+        }
+      
+    ]
+}
