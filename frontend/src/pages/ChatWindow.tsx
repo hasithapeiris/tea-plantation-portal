@@ -52,10 +52,11 @@ const ChatWindow = () => {
           >
             {/* Chats */}
             <div className="mt-8 space-y-2">
-              <h2 className="text-xl font-semibold mb-4">Chats</h2>
-              <div className="flex items-center gap-2 p-2 rounded-lg cursor-pointer hover:bg-gray-200">
-                <FaUserCircle className="text-2xl" />
-                <span className="text-sm">Support Agent</span>
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                Chats
+              </h2>
+              <div className="flex items-center gap-2 p-2 rounded-lg border cursor-pointer hover:bg-gray-200">
+                <span className="text-sm text-gray-800">Support Agent</span>
               </div>
             </div>
             {/* Logout Button */}

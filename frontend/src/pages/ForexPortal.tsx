@@ -34,12 +34,12 @@ const ForexPortal = () => {
       link: "/portal/forex/regional-production-forecast",
     },
     {
-      image: Tea_Exports,
+      image: Tea_Production,
       title: "National Production Forecast",
       link: "/portal/forex/national-production-forecast",
     },
     {
-      image: Tea_Production,
+      image: Tea_Exports,
       title: "FEE Forecast",
       link: "/portal/forex/fee-forecast",
     },
