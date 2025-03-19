@@ -26,9 +26,24 @@ const RegionalMiniChart: FC<RegionalChartProps> = ({
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey={label1} stroke="#50C878" />
-          <Line type="monotone" dataKey={label2} stroke="#8A9A5B" />
-          <Line type="monotone" dataKey={label3} stroke="#C9CC3F" />
+          <Line
+            type="monotone"
+            dataKey={label1}
+            name="Low Grown"
+            stroke="#50C878"
+          />
+          <Line
+            type="monotone"
+            dataKey={label2}
+            name="Mid Grown"
+            stroke="#8A9A5B"
+          />
+          <Line
+            type="monotone"
+            dataKey={label3}
+            name="High Grown"
+            stroke="#C9CC3F"
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>

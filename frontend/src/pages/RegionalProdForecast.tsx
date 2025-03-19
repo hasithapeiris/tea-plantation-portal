@@ -44,8 +44,8 @@ const RegionalProdForecast = () => {
   return (
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
-      <div className="wrapper mt-14">
-        <div className="wrapper-header my-14 text-center text-gray-600 space-y-4">
+      <div className="wrapper mt-14 flex flex-col items-center">
+        <div className="wrapper-header mb-14 text-center text-gray-600 space-y-4">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
             cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
@@ -101,6 +101,14 @@ const RegionalProdForecast = () => {
             pariatur sapiente consectetur soluta architecto labore.
           </p>
         </div>
+        <a
+          href="merged_elevations.csv"
+          download="merged_elevations.csv"
+          className="mt-12 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg 
+          hover:bg-green-700 transition"
+        >
+          Download Regional Data
+        </a>
       </div>
     </>
   );
