@@ -46,7 +46,7 @@ const FEESummary = () => {
               2026 (99.24 million USD)
             </p>
             <p className="text-gray-600">
-              <span className="font-bold">⭐ Trend:</span> Similar to 2025, fees
+              <span className="font-bold">⭐ Trend:</span> Similar to 2025, FEEs
               fluctuate, with a dip in September and a peak in August.
             </p>
           </div>
@@ -60,7 +60,7 @@ const FEESummary = () => {
           <div className="space-y-2">
             <p className="text-gray-600">
               <span className="font-bold">✅ Average FEEs:</span> The average
-              fee in 2026 (106.08 million USD) is slightly higher than in 2025
+              FEE in 2026 (106.08 million USD) is slightly higher than in 2025
               (105.83 million USD).
             </p>
             <p className="text-gray-600">
@@ -69,7 +69,7 @@ const FEESummary = () => {
               September and higher FEEs in August.
             </p>
             <p className="text-gray-600">
-              <span className="font-bold">✅ Peak FEEs:</span> The highest fee
+              <span className="font-bold">✅ Peak FEEs:</span> The highest FEE
               occurs in August 2026 (115.18 million USD), which is higher than
               the peak in August 2025 (112.60 million USD).
             </p>
