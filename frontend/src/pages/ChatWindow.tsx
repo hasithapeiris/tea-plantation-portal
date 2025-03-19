@@ -36,10 +36,10 @@ const ChatWindow = () => {
               onClick={handleClick}
             />
             <Link to="/" className="flex justify-start">
-              <div className="p-3 bg-primary rounded-xl shadow-lg max-w-fit">
+              <div className="p-2 bg-primary rounded-xl shadow-lg max-w-fit">
                 <img
-                  className="w-16 object-contain md:w-20"
-                  src={Logo}
+                  className="w-8 object-contain md:w-8"
+                  src="icon.png"
                   alt="logo"
                 />
               </div>
@@ -80,7 +80,7 @@ const ChatWindow = () => {
                 key={index}
                 className={`max-w-xs p-3 rounded-lg ${
                   msg.sender === "user"
-                    ? "bg-blue-500 text-white self-end ml-auto"
+                    ? "bg-green-500 text-white self-end ml-auto"
                     : "bg-gray-200 text-gray-800"
                 }`}
               >
@@ -100,7 +100,7 @@ const ChatWindow = () => {
               onKeyPress={(e) => e.key === "Enter" && sendMessage()}
             />
             <button
-              className="ml-2 bg-blue-500 text-white p-2 rounded-lg"
+              className="ml-2 bg-green-500 text-white p-2 rounded-lg"
               onClick={sendMessage}
             >
               <FaPaperPlane />

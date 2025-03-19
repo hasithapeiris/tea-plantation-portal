@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { Tea_Export } from "../assets";
-import { ChartGrid, ForecastChart, SubHeader } from "../components";
+import {
+  ChartGrid,
+  ForecastChart,
+  SubHeader,
+  TeaProductionSummary,
+} from "../components";
 import axios from "axios";
 
 const NationalProdForecast = () => {
@@ -44,17 +49,6 @@ const NationalProdForecast = () => {
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
       <div className="wrapper mt-14">
-        <div className="wrapper-header my-14 text-center text-gray-600 space-y-4">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Natus eum cum odio explicabo corporis quibusdam
-            possimus, voluptas fugiat, deserunt modi eius optio vitae commodi
-            pariatur sapiente consectetur soluta architecto labore.
-          </p>
-        </div>
         <ForecastChart
           data={data}
           label="nationalProduction"
@@ -64,22 +58,31 @@ const NationalProdForecast = () => {
         <div className="mt-8">
           <ChartGrid charts={charts} dValue1={10} dValue2={30} />
         </div>
-        <div className="wrapper-header mt-14 text-center text-gray-600 space-y-4">
+        <div className="mt-8">
+          <TeaProductionSummary />
+        </div>
+        {/* <div className="wrapper-header mt-14 text-center text-gray-600 space-y-4">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore.
+            Tea production in 2025 and 2026 shows a stable and slightly
+            increasing trend, with total production rising from 310.73 million
+            kg in 2025 to 312.94 million kg in 2026. The average monthly
+            production also increased marginally from 25.89 million kg to 26.08
+            million kg, indicating consistent growth in the industry. Both years
+            exhibit similar seasonal patterns, with production dipping in May
+            (around 22.67-22.68 million kg) and peaking towards the end of the
+            year, particularly in November 2025 (26.71 million kg) and October
+            2026 (27.28 million kg).
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Natus eum cum odio explicabo corporis quibusdam
-            possimus, voluptas fugiat, deserunt modi eius optio vitae commodi
-            pariatur sapiente consectetur soluta architecto labore.
-          </p>
+        </div> */}
+        <div className="mt-12 flex flex-col items-center">
+          <a
+            href="ntp_forecast.csv"
+            download="ntp_forecast.csv"
+            className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg 
+          hover:bg-green-700 transition"
+          >
+            Download Production Data
+          </a>
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Tea_Export } from "../assets";
-import { ChartGrid, ForecastChart, SubHeader } from "../components";
+import { ChartGrid, FEESummary, ForecastChart, SubHeader } from "../components";
 import axios from "axios";
 
 const ForexForecast = () => {
@@ -44,17 +44,6 @@ const ForexForecast = () => {
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
       <div className="wrapper mt-14">
-        <div className="wrapper-header my-14 text-center text-gray-600 space-y-4">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Natus eum cum odio explicabo corporis quibusdam
-            possimus, voluptas fugiat, deserunt modi eius optio vitae commodi
-            pariatur sapiente consectetur soluta architecto labore.
-          </p>
-        </div>
         <ForecastChart
           data={data}
           label="forecastedFee"
@@ -64,22 +53,18 @@ const ForexForecast = () => {
         <div className="mt-8">
           <ChartGrid charts={charts} dValue1={75} dValue2={125} />
         </div>
-        <div className="wrapper-header mt-14 text-center text-gray-600 space-y-4">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Natus eum cum odio explicabo corporis quibusdam
-            possimus, voluptas fugiat, deserunt modi eius optio vitae commodi
-            pariatur sapiente consectetur soluta architecto labore.
-          </p>
+        <div className="mt-8">
+          <FEESummary />
+        </div>
+        <div className="mt-12 flex flex-col items-center">
+          <a
+            href="fee_forecast.csv"
+            download="fee_forecast.csv"
+            className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg 
+          hover:bg-green-700 transition"
+          >
+            Download FEE Data
+          </a>
         </div>
       </div>
     </>

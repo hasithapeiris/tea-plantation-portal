@@ -8,6 +8,9 @@ import ChartGrid from "./ChartGrid";
 import RegionalChart from "./RegionalChart";
 import RegionalMiniChart from "./RegionalMiniChart";
 import DashboardLayout from "./DashboardLayout";
+import TeaProductionSummary from "./TeaProductionSummary";
+import FEESummary from "./FEESummary";
+import RegionalSummary from "./RegionalSummary";
 
 export {
   MainCarousel,
@@ -20,4 +23,7 @@ export {
   RegionalChart,
   RegionalMiniChart,
   DashboardLayout,
+  TeaProductionSummary,
+  FEESummary,
+  RegionalSummary,
 };

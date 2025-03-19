@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { Tea_Export } from "../assets";
-import { RegionalChart, RegionalMiniChart, SubHeader } from "../components";
+import {
+  RegionalChart,
+  RegionalMiniChart,
+  RegionalSummary,
+  SubHeader,
+} from "../components";
 import axios from "axios";
 import { RegionalChartType } from "../types";
 
@@ -44,22 +49,15 @@ const RegionalProdForecast = () => {
   return (
     <>
       <SubHeader image={Tea_Export} title={title} description={description} />
-      <div className="wrapper mt-14 flex flex-col items-center">
-        <div className="wrapper-header mb-14 text-center text-gray-600 space-y-4">
+      <div className="wrapper mt-14">
+        <div className="wrapper-header my-14 text-center text-gray-600 space-y-4">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Natus eum cum odio explicabo corporis quibusdam
-            possimus, voluptas fugiat, deserunt modi eius optio vitae commodi
-            pariatur sapiente consectetur soluta architecto labore.
+            Tea production in all three categories remained stable across 2025
+            and 2026, with only minor variations in monthly output. Low Grown
+            and Mid Grown production saw slight increases, whereas High Grown
+            production experienced a small decline. Seasonal fluctuations were
+            evident, but no drastic shifts occurred, reflecting a balanced and
+            predictable trend in tea production during these years.
           </p>
         </div>
         <RegionalChart
@@ -84,31 +82,19 @@ const RegionalProdForecast = () => {
             ))}
           </div>
         </div>
-        <div className="wrapper-header mt-14 text-center text-gray-600 space-y-4">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum
-            cum odio explicabo corporis quibusdam possimus, voluptas fugiat,
-            deserunt modi eius optio vitae commodi pariatur sapiente consectetur
-            soluta architecto labore. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Natus eum cum odio explicabo corporis quibusdam
-            possimus, voluptas fugiat, deserunt modi eius optio vitae commodi
-            pariatur sapiente consectetur soluta architecto labore.
-          </p>
+        <div className="mt-8">
+          <RegionalSummary />
         </div>
-        <a
-          href="merged_elevations.csv"
-          download="merged_elevations.csv"
-          className="mt-12 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg 
+        <div className="mt-12 flex flex-col items-center">
+          <a
+            href="merged_elevations.csv"
+            download="merged_elevations.csv"
+            className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg 
           hover:bg-green-700 transition"
-        >
-          Download Regional Data
-        </a>
+          >
+            Download Regional Data
+          </a>
+        </div>
       </div>
     </>
   );
