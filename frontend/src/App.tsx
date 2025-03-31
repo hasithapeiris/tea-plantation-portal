@@ -1,5 +1,5 @@
 import "./App.css";
-import { DashboardLayout, Navbar } from "./components";
+import { DashboardLayout } from "./components";
 import MainLayout from "./components/MainLayout";
 import {
   Home,

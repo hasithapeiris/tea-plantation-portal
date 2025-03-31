@@ -1,9 +1,8 @@
-import Logo from "../assets/sliit360.svg";
 import { Link } from "react-router-dom";
 import MenuIco from "../assets/menu.png";
 import { useState } from "react";
 import LogoutMDIco from "../assets/logout_md.png";
-import { FaUserCircle, FaPaperPlane } from "react-icons/fa";
+import { FaPaperPlane } from "react-icons/fa";
 
 const ChatWindow = () => {
   const [messages, setMessages] = useState([

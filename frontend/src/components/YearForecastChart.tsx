@@ -13,8 +13,6 @@ import {
 
 const YearForecastChart = () => {
   const [data, setData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-  const [selectedYear, setSelectedYear] = useState("2024");
 
   useEffect(() => {
     fetchData();
