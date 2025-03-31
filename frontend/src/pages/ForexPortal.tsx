@@ -1,12 +1,5 @@
-import {
-  Header_1,
-  Header_2,
-  Header_3,
-  Tea_Export,
-  Tea_Exports,
-  Tea_Production,
-} from "../assets";
-import { Footer, SubHeader } from "../components";
+import { Header_1, Tea_Exports, Tea_Production } from "../assets";
+import { SubHeader } from "../components";
 
 const Card = ({
   image,
@@ -32,38 +25,23 @@ const ForexPortal = () => {
   const image = Header_1;
   const title = "Tea Information Forex Portal";
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sitamet nisl non urna fringilla cursus vitae nec metus. Suspendisse malesuada sodales varius.";
+    "Stay ahead with our tea production and forex forecasting tools, powered by machine learning. Get forecasted insights on production volumes, and foreign exchange earnings.";
 
   const cards = [
     {
-      image: Tea_Export,
-      title: "FEE Prediction",
-      link: "/portal/forex/fee",
-    },
-    {
       image: Header_1,
-      title: "Production Plan (Low Grown)",
-      link: "https://example.com/resource2",
-    },
-    {
-      image: Header_2,
-      title: "Production Plan (Mid Grown)",
-      link: "https://example.com/resource3",
-    },
-    {
-      image: Header_3,
-      title: "Production Plan (High Grown)",
-      link: "#",
-    },
-    {
-      image: Tea_Exports,
-      title: "Tea Exports Data",
-      link: "https://example.com/resource2",
+      title: "Regional Production Forecast",
+      link: "/portal/forex/regional-production-forecast",
     },
     {
       image: Tea_Production,
-      title: "Tea Production Data",
-      link: "https://example.com/resource3",
+      title: "National Production Forecast",
+      link: "/portal/forex/national-production-forecast",
+    },
+    {
+      image: Tea_Exports,
+      title: "FEE Forecast",
+      link: "/portal/forex/fee-forecast",
     },
   ];
 
@@ -82,7 +60,6 @@ const ForexPortal = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };
